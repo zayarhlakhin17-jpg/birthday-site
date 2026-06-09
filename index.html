@@ -1328,40 +1328,30 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 
 // Music pill (suggests a Spotify search — no autoplay without gesture)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//  BACKGROUND MUSIC
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-const bgm = document.getElementById('bgm');
-let musOn = false;
-
-bgm.volume = 0.18;
-
-document.getElementById('music').addEventListener('click', () => {
-
-  musOn = !musOn;
-
-  if (musOn) {
-
-    bgm.play();
-
-    document.getElementById('musLbl').textContent = 'Playing ♪';
-
-  } else {
-
-    bgm.pause();
-
-    document.getElementById('musLbl').textContent = 'Ambience';
-
-  }
-
-});
-   </script>
-
 <audio id="bgm" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+let musOn = false;
 
+document.getElementById('music').addEventListener('click', () => {
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.18;
+
+  musOn = !musOn;
+
+  if (musOn) {
+    bgm.play().catch(error => {
+      console.log("Playback blocked by browser settings:", error);
+    });
+    document.getElementById('musLbl').textContent = 'Playing ♪';
+  } else {
+    bgm.pause();
+    document.getElementById('musLbl').textContent = 'Ambience';
+  }
+});
+</script>
 
 </body>
 </html>
