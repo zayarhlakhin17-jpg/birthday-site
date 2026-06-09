@@ -1327,14 +1327,41 @@ document.getElementById('modal').addEventListener('click', e=>{
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 
 // Music pill (suggests a Spotify search — no autoplay without gesture)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//  BACKGROUND MUSIC
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+const bgm = document.getElementById('bgm');
 let musOn = false;
-document.getElementById('music').addEventListener('click',()=>{
+
+bgm.volume = 0.18;
+
+document.getElementById('music').addEventListener('click', () => {
+
   musOn = !musOn;
-  document.getElementById('musLbl').textContent = musOn ? 'Playing ♪' : 'Ambience';
-  if(musOn){
-    egg('egg2'); // delightful surprise when they click music
+
+  if (musOn) {
+
+    bgm.play();
+
+    document.getElementById('musLbl').textContent = 'Playing ♪';
+
+  } else {
+
+    bgm.pause();
+
+    document.getElementById('musLbl').textContent = 'Ambience';
+
   }
+
 });
-</script>
+   </script>
+
+<audio id="bgm" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+
 </body>
 </html>
