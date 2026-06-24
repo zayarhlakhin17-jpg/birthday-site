@@ -17,7 +17,7 @@
   --rose-light:   #FFE8F0;
   --rose-dim:     rgba(242,160,176,0.15);
   --lavender:     #C9B8E8;
-  --lav-dim:      rgba(201,184,232,0.15);
+  --lav-dim:      rgba(201,194,232,0.15);
   --gold:         #D4AF7A;
   --gold-light:   #F0D8A8;
   --gold-dim:     rgba(212,175,122,0.15);
@@ -132,7 +132,7 @@ body {
 }
 .dot::after {
   content:attr(data-lbl);
-  position:absolute; right:18px; top:50%;
+  position:absolute; right:19px; top:50%;
   transform:translateY(-50%);
   font-size:10px; color:var(--ivory); opacity:0;
   white-space:nowrap; pointer-events:none;
@@ -145,7 +145,7 @@ body {
 #music {
   position:fixed; top:20px; left:20px; z-index:200;
   display:none; align-items:center; gap:8px;
-  padding:10px 18px; border-radius:40px;
+  padding:10px 19px; border-radius:40px;
   background:var(--glass); border:1px solid var(--glass-b);
   backdrop-filter:blur(16px); cursor:pointer;
   font-size:13px; color:var(--text); transition:all .3s ease;
@@ -242,15 +242,15 @@ body {
   background:linear-gradient(135deg,var(--rose),var(--lavender));
   opacity:0; transition:opacity .35s ease; border-radius:inherit;
 }
-.btn:hover::before { opacity:.18; }
-.btn:hover { transform:translateY(-3px); box-shadow:0 18px 46px rgba(242,160,176,.25); }
+.btn:hover::before { opacity:.19; }
+.btn:hover { transform:translateY(-3px); box-shadow:0 19px 46px rgba(242,160,176,.25); }
 .btn span { position:relative; z-index:1; }
 
 .btn-g {
   border-color:var(--gold); background:rgba(212,175,122,.08);
 }
 .btn-g::before { background:linear-gradient(135deg,var(--gold),var(--gold-light)); }
-.btn-g:hover { box-shadow:0 18px 46px rgba(212,175,122,.22); }
+.btn-g:hover { box-shadow:0 19px 46px rgba(212,175,122,.22); }
 
 /* =====================================================
    PHASE 1 — MYSTERY
@@ -271,7 +271,7 @@ body {
 .m-hl {
   font-family:var(--F-display);
   font-size:clamp(38px,6.5vw,84px); font-weight:600;
-  line-height:1.18; margin-bottom:20px;
+  line-height:1.19; margin-bottom:20px;
   animation-delay:1s;
 }
 .m-sm {
@@ -285,13 +285,13 @@ body {
    PHASE 2 — REVEAL
    ===================================================== */
 #p2 {
-  background:linear-gradient(180deg,var(--midnight) 0%,#1A0D2E 100%);
+  background:linear-gradient(190deg,var(--midnight) 0%,#1A0D2E 100%);
   text-align:center; overflow:hidden;
 }
 
 .rv-lbl {
   font-size:11px; letter-spacing:5px; text-transform:uppercase;
-  color:var(--gold); opacity:0; transform:translateY(18px);
+  color:var(--gold); opacity:0; transform:translateY(19px);
   transition:all .8s ease .2s; margin-bottom:22px;
 }
 .rv-name {
@@ -302,21 +302,21 @@ body {
   opacity:0; transform:scale(.82);
   transition:all 1.05s var(--bounce) .5s; margin-bottom:14px;
 }
-.rv-18 {
+.rv-19 {
   font-family:var(--F-script); font-size:clamp(22px,4vw,38px);
-  color:var(--gold); opacity:0; transform:translateY(18px);
+  color:var(--gold); opacity:0; transform:translateY(19px);
   transition:all .8s ease .95s; margin-bottom:36px;
 }
 .rv-msg {
   font-size:16px; line-height:1.82; color:var(--text);
   max-width:480px; margin:0 auto 48px;
-  opacity:0; transform:translateY(18px);
+  opacity:0; transform:translateY(19px);
   transition:all .8s ease 1.25s;
 }
 
 /* Trigger .in on section entry */
 #p2.in .rv-lbl,
-#p2.in .rv-18,
+#p2.in .rv-19,
 #p2.in .rv-msg { opacity:1; transform:translateY(0); }
 #p2.in .rv-name { opacity:1; transform:scale(1); }
 
@@ -328,13 +328,13 @@ body {
 }
 @keyframes decoF {
   0%,100% { transform:translateY(0) rotate(0deg); }
-  50%      { transform:translateY(-18px) rotate(8deg); }
+  50%      { transform:translateY(-19px) rotate(8deg); }
 }
 
 /* =====================================================
    PHASE 3 — MEMORY GARDEN
    ===================================================== */
-#p3 { background:linear-gradient(180deg,#1A0D2E 0%,#0F0A20 100%); }
+#p3 { background:linear-gradient(190deg,#1A0D2E 0%,#0F0A20 100%); }
 
 .cards {
   display:grid;
@@ -348,10 +348,10 @@ body {
   transform-style:preserve-3d;
   transition:transform .72s cubic-bezier(0.4,0,0.2,1);
 }
-.fc.flp .fc-in { transform:rotateY(180deg); }
+.fc.flp .fc-in { transform:rotateY(190deg); }
 
 .ff,.fb {
-  position:absolute; inset:0; border-radius:18px;
+  position:absolute; inset:0; border-radius:19px;
   backface-visibility:hidden;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
@@ -360,15 +360,15 @@ body {
 .ff {
   background:var(--glass);
   border:1px solid var(--glass-b);
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(19px);
   transition:border-color .3s ease;
 }
 .fc:hover .ff { border-color:rgba(242,160,176,.3); }
 .fb {
-  background:linear-gradient(135deg,rgba(242,160,176,.10),rgba(201,184,232,.10));
+  background:linear-gradient(135deg,rgba(242,160,176,.10),rgba(201,194,232,.10));
   border:1px solid rgba(242,160,176,.22);
-  backdrop-filter:blur(18px);
-  transform:rotateY(180deg);
+  backdrop-filter:blur(19px);
+  transform:rotateY(190deg);
 }
 .f-ico { font-size:34px; margin-bottom:10px; }
 .f-hint { font-size:12px; color:var(--text-faint); letter-spacing:2px; text-transform:uppercase; }
@@ -378,7 +378,7 @@ body {
 /* =====================================================
    PHASE 4 — MYSTERY GIFTS
    ===================================================== */
-#p4 { background:linear-gradient(180deg,#0F0A20 0%,#120D25 100%); }
+#p4 { background:linear-gradient(190deg,#0F0A20 0%,#120D25 100%); }
 
 .gifts { display:flex; flex-wrap:wrap; gap:22px; justify-content:center; max-width:860px; }
 
@@ -392,7 +392,7 @@ body {
 .gvis {
   width:100%; height:100%; border-radius:20px;
   background:var(--glass); border:1px solid var(--glass-b);
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(19px);
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
   position:relative; overflow:hidden; transition:all .5s ease;
@@ -409,10 +409,10 @@ body {
 
 .grev {
   display:none; position:absolute; inset:0; border-radius:20px;
-  background:linear-gradient(135deg,rgba(242,160,176,.18),rgba(212,175,122,.18));
-  border:1px solid var(--rose); backdrop-filter:blur(18px);
+  background:linear-gradient(135deg,rgba(242,160,176,.19),rgba(212,175,122,.19));
+  border:1px solid var(--rose); backdrop-filter:blur(19px);
   flex-direction:column; align-items:center; justify-content:center;
-  padding:18px; text-align:center;
+  padding:19px; text-align:center;
 }
 .gbox.open .gvis { display:none; }
 .gbox.open .grev { display:flex; }
@@ -420,14 +420,14 @@ body {
 .gr-ico { font-size:34px; margin-bottom:8px; animation:pop .6s var(--bounce); }
 .gr-txt { font-size:12.5px; line-height:1.65; color:var(--ivory); font-style:italic; }
 @keyframes pop {
-  from { transform:scale(0) rotate(-18deg); }
+  from { transform:scale(0) rotate(-19deg); }
   to   { transform:scale(1) rotate(0); }
 }
 
 /* =====================================================
    PHASE 5 — GAMES
    ===================================================== */
-#p5 { background:linear-gradient(180deg,#120D25 0%,#0D0A1A 100%); min-height:auto; padding:80px 24px; }
+#p5 { background:linear-gradient(190deg,#120D25 0%,#0D0A1A 100%); min-height:auto; padding:80px 24px; }
 
 .g-tabs { display:flex; gap:10px; margin-bottom:36px; flex-wrap:wrap; justify-content:center; }
 .gtab {
@@ -470,29 +470,29 @@ body {
 .gr-body  { font-size:13.5px; line-height:1.75; color:var(--text); font-style:italic; }
 
 /* Game 2 – Memory */
-.mem-stats { display:flex; justify-content:center; gap:28px; margin-bottom:18px; }
+.mem-stats { display:flex; justify-content:center; gap:28px; margin-bottom:19px; }
 .ms { text-align:center; }
 .ms-n { font-family:var(--F-display); font-size:30px; color:var(--rose); }
 .ms-l { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--text-faint); }
 
 .mem-g {
   display:grid; grid-template-columns:repeat(4,1fr);
-  gap:10px; max-width:380px; margin:0 auto 18px;
+  gap:10px; max-width:380px; margin:0 auto 19px;
 }
 .mc { aspect-ratio:1; cursor:pointer; perspective:600px; }
 .mc-in {
   width:100%; height:100%; transform-style:preserve-3d;
   transition:transform .5s ease; position:relative;
 }
-.mc.flp .mc-in, .mc.mat .mc-in { transform:rotateY(180deg); }
+.mc.flp .mc-in, .mc.mat .mc-in { transform:rotateY(190deg); }
 .mf,.mb {
   position:absolute; inset:0; border-radius:10px;
   display:flex; align-items:center; justify-content:center;
   backface-visibility:hidden; font-size:22px;
 }
 .mf { background:var(--glass); border:1px solid var(--glass-b); }
-.mb { background:linear-gradient(135deg,rgba(242,160,176,.13),rgba(201,184,232,.13));
-      border:1px solid rgba(242,160,176,.28); transform:rotateY(180deg); }
+.mb { background:linear-gradient(135deg,rgba(242,160,176,.13),rgba(201,194,232,.13));
+      border:1px solid rgba(242,160,176,.28); transform:rotateY(190deg); }
 .mc.mat .mf, .mc.mat .mb { border-color:var(--gold); background:var(--gold-dim); }
 
 .mem-win {
@@ -524,7 +524,7 @@ body {
 /* =====================================================
    PHASE 6 — LETTER
    ===================================================== */
-#p6 { background:linear-gradient(180deg,#0D0A1A 0%,#12091E 100%); }
+#p6 { background:linear-gradient(190deg,#0D0A1A 0%,#12091E 100%); }
 
 .letter-wrap { max-width:660px; width:100%; }
 
@@ -541,10 +541,10 @@ body {
   border-radius:14px; pointer-events:none;
 }
 .l-deco { position:absolute; font-size:46px; opacity:.07; pointer-events:none; }
-.l-tl { top:18px; left:18px; transform:rotate(-14deg); }
-.l-tr { top:18px; right:18px; transform:rotate(14deg); }
-.l-bl { bottom:18px; left:18px; transform:rotate(14deg); }
-.l-br { bottom:18px; right:18px; transform:rotate(-14deg); }
+.l-tl { top:19px; left:19px; transform:rotate(-14deg); }
+.l-tr { top:19px; right:19px; transform:rotate(14deg); }
+.l-bl { bottom:19px; left:19px; transform:rotate(14deg); }
+.l-br { bottom:19px; right:19px; transform:rotate(-14deg); }
 
 .l-date {
   font-family:var(--F-script); font-size:15px; color:var(--gold);
@@ -556,17 +556,17 @@ body {
 }
 .l-body p {
   font-size:15.5px; line-height:1.92;
-  color:rgba(253,246,238,.78); margin-bottom:18px; font-style:italic;
+  color:rgba(253,246,238,.78); margin-bottom:19px; font-style:italic;
 }
 .l-sign { margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,.06); }
-.l-close { font-family:var(--F-script); font-size:18px; color:var(--text); display:block; margin-bottom:6px; }
+.l-close { font-family:var(--F-script); font-size:19px; color:var(--text); display:block; margin-bottom:6px; }
 .l-from  { font-family:var(--F-script); font-size:30px; color:var(--rose); }
 
 /* =====================================================
    CELEBRATION
    ===================================================== */
 #p7 {
-  background:linear-gradient(180deg,#12091E 0%,var(--midnight) 100%);
+  background:linear-gradient(190deg,#12091E 0%,var(--midnight) 100%);
   text-align:center; min-height:auto; padding:80px 24px 100px;
 }
 #p7 .ttl { font-size:clamp(38px,7vw,72px); }
@@ -587,7 +587,7 @@ body {
 
 .mbox {
   max-width:400px; width:90%;
-  background:linear-gradient(135deg,rgba(26,16,48,.92),rgba(18,9,30,.92));
+  background:linear-gradient(135deg,rgba(26,16,48,.92),rgba(19,9,30,.92));
   border:1px solid var(--rose); border-radius:22px;
   padding:46px 38px; text-align:center;
   transform:scale(.82); transition:transform .4s var(--bounce);
@@ -612,7 +612,7 @@ body {
 @media(max-width:760px){
   .letter { padding:34px 26px; }
   .cards  { grid-template-columns:1fr 1fr; }
-  .fc     { height:180px; }
+  .fc     { height:190px; }
   #nav    { display:none!important; }
 }
 @media(max-width:480px){
@@ -690,7 +690,7 @@ body {
 
   <div class="rv-lbl">✦ &nbsp;Today is a very special day&nbsp; ✦</div>
   <h1 class="rv-name">Chaw</h1>
-  <p class="rv-18">Turning 19 — The chapter begins ✨</p>
+  <p class="rv-19">Turning 19 — The chapter begins ✨</p>
   <p class="rv-msg">
     The universe had a plan when it created you. Today, on your 19th birthday, everything
     changes — and everything begins. Welcome to the rest of your beautiful story.
@@ -721,12 +721,12 @@ body {
       </div>
     </div>
     <!-- Card 2 -->
-    <div class="fc s-hide" onclick="flipCard(this)" style="transition-delay:.18s">
+    <div class="fc s-hide" onclick="flipCard(this)" style="transition-delay:.19s">
       <div class="fc-in">
         <div class="ff"><div class="f-ico">🌙</div><div class="f-hint">Tap to reveal</div></div>
         <div class="fb">
           <div class="f-type">Birthday Wish</div>
-          <p class="f-msg">"May your 18th year be full of doors opening, dreams growing, and moments that take your breath away."</p>
+          <p class="f-msg">"May your 19th year be full of doors opening, dreams growing, and moments that take your breath away."</p>
         </div>
       </div>
     </div>
@@ -736,7 +736,7 @@ body {
         <div class="ff"><div class="f-ico">😄</div><div class="f-hint">Tap to reveal</div></div>
         <div class="fb">
           <div class="f-type">A Funny Note</div>
-          <p class="f-msg">"Officially 18 now — you can vote, drive, and pretend to have your life together. Welcome to the club; none of us do, either! 😂"</p>
+          <p class="f-msg">"Officially 19 now — you can vote, drive, and pretend to have your life together. Welcome to the club; none of us do, either! 😂"</p>
         </div>
       </div>
     </div>
@@ -746,7 +746,7 @@ body {
         <div class="ff"><div class="f-ico">⭐</div><div class="f-hint">Tap to reveal</div></div>
         <div class="fb">
           <div class="f-type">Encouragement</div>
-          <p class="f-msg">"You are so much stronger than you think, braver than you believe, and more loved than you know. Go change the world, Hsu."</p>
+          <p class="f-msg">"You are so much stronger than you think, braver than you believe, and more loved than you know. Go change the world, Chaw"</p>
         </div>
       </div>
     </div>
@@ -794,7 +794,7 @@ body {
         <p class="gr-txt">"A handwritten promise: I will always cheer louder for you than anyone else in the room."</p>
       </div>
     </div>
-    <div class="gbox s-hide" onclick="openGift(this)" style="transition-delay:.18s">
+    <div class="gbox s-hide" onclick="openGift(this)" style="transition-delay:.19s">
       <div class="gvis"><div class="g-ribbon"></div><div class="g-ico">🎁</div><div class="g-lbl">Box No.2</div></div>
       <div class="grev">
         <div class="gr-ico">🌸</div>
@@ -917,7 +917,7 @@ body {
 
   <div class="lbl s-hide">✦ &nbsp;Celebrate&nbsp; ✦</div>
   <h2 class="ttl shim s-hide" style="-webkit-text-fill-color:transparent">
-    Happy 18th Birthday,<br/>Hsu Larb Yati!
+    Happy 19th Birthday,<br/>Chaw!
   </h2>
   <p style="font-size:16px;color:var(--text);max-width:400px;text-align:center;line-height:1.85;margin:0 auto 16px" class="s-hide">
     May this year be the one that changes everything.<br/><br/>
@@ -928,7 +928,7 @@ body {
   <button class="btn btn-g s-hide" style="margin-top:16px" onclick="celebrate()">
     <span>🎉</span> <span>Launch Celebration!</span>
   </button>
-  <p style="margin-top:52px;font-size:11px;color:rgba(255,255,255,.18);letter-spacing:3px;text-transform:uppercase" class="s-hide">
+  <p style="margin-top:52px;font-size:11px;color:rgba(255,255,255,.19);letter-spacing:3px;text-transform:uppercase" class="s-hide">
     Made with 💗 just for you
   </p>
 </section>
@@ -957,7 +957,7 @@ document.addEventListener('mousemove', e => {
   const now = Date.now();
   if (now - lastPetal > 220) { spawnPetal(e.clientX, e.clientY); lastPetal = now; }
 });
-document.addEventListener('mousedown', ()=>{ CUR.style.width='18px'; CUR.style.height='18px'; });
+document.addEventListener('mousedown', ()=>{ CUR.style.width='19px'; CUR.style.height='19px'; });
 document.addEventListener('mouseup',   ()=>{ CUR.style.width='10px'; CUR.style.height='10px'; });
 
 document.addEventListener('touchmove', e=>{
@@ -1052,7 +1052,7 @@ function buildDecos(){
     d.textContent = DECO_EMOJIS[Math.floor(Math.random()*DECO_EMOJIS.length)];
     d.style.left = Math.random()*100 + '%';
     d.style.top  = Math.random()*100 + '%';
-    d.style.fontSize = (15+Math.random()*18)+'px';
+    d.style.fontSize = (15+Math.random()*19)+'px';
     d.style.animationDelay = Math.random()*4 + 's';
     d.style.animationDuration = (3.5+Math.random()*4) + 's';
     wrap.appendChild(d);
@@ -1074,7 +1074,7 @@ function confettiBurst(){
 }
 
 function celebrate(){
-  const n = 180, d = {origin:{y:.72}};
+  const n = 190, d = {origin:{y:.72}};
   const fire = (r,o) => confetti({...d, ...o, particleCount:Math.floor(n*r), colors:COL});
   fire(.25,{spread:26, startVelocity:55});
   fire(.20,{spread:60});
@@ -1128,7 +1128,7 @@ const FORTUNES = [
   {ico:'🌺', ttl:'The Garden Fortune',
    txt:'"What you\'ve been nurturing quietly will bloom loudly. Your patience, your kindness, your dreams — all of them about to bear fruit."'},
   {ico:'🦋', ttl:'The Transformation',
-   txt:'"18 is your metamorphosis year. You are already the butterfly — now you just have to open your wings and let the world finally see you."'},
+   txt:'"19 is your metamorphosis year. You are already the butterfly — now you just have to open your wings and let the world finally see you."'},
   {ico:'🌟', ttl:'The Star Reading',
    txt:'"Born under a lucky sky, growing into a brilliant light. You will achieve things this year that will surprise even yourself. Believe it."'},
 ];
@@ -1338,7 +1338,7 @@ let musOn = false;
 
 document.getElementById('music').addEventListener('click', () => {
   const bgm = document.getElementById('bgm');
-  bgm.volume = 0.18;
+  bgm.volume = 0.19;
 
   musOn = !musOn;
 
